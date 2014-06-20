@@ -8,7 +8,7 @@
 
 (om/root
   (fn [app owner]
-    (apply dom/ul nil
+    (apply dom/ul #js {:className }
       (map (fn [text] (dom/li nil text) (:list app)))))
   app-state
   {:target (. js/document (getElementById "app0"))})
